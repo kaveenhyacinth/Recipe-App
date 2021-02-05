@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
+import React, { Fragment } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { enableScreens } from "react-native-screens";
 
@@ -8,7 +8,12 @@ import MealsNavigator from "./navigation/MealsNavigator";
 enableScreens();
 
 export default function App() {
-  return <MealsNavigator />;
+  return (
+    <Fragment>
+      <MealsNavigator />
+      <StatusBar style="auto" />
+    </Fragment>
+  );
 }
 
 const styles = StyleSheet.create({
